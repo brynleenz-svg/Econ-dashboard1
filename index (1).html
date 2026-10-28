@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Zealand economy: CPI, inflation, OCR, unemployment, NZD | YourSiteName</title>
+  <meta name="description" content="Key New Zealand economic figures in one page: CPI, annual inflation, Official Cash Rate, unemployment and the NZ dollar, with trend charts and the date of the latest data.">
+  <link rel="canonical" href="https://yoursite.com/nz/">
+  <meta property="og:title" content="New Zealand economy at a glance | YourSiteName">
+  <meta property="og:description" content="CPI, annual inflation, OCR, unemployment and the NZ dollar, from Stats NZ and the Reserve Bank of New Zealand.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/nz/">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b63c4'/%3E%3Cpath d='M5 22l7-8 5 5 10-12' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" id="brand" href="../">YourSiteName</a>
+      <nav id="country-nav" aria-label="Countries"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>New Zealand economy: key figures</h1>
+      <p class="lead">The numbers New Zealand businesses look up most, in one place. Each card shows the latest figure, how it moved, a trend line and the date of the latest data.</p>
+      <p class="meta" id="checked"></p>
+      <div class="banner" id="banner" hidden></div>
+    </section>
+
+    <!-- The cards are drawn here by ../assets/dashboard.js. To build another country's page,
+         copy this folder and change data-country (e.g. "au"). -->
+    <div id="dashboard" class="grid" data-country="nz" aria-live="polite">
+      <p>Loading figures…</p>
+    </div>
+    <noscript><p>This page needs JavaScript to draw the charts.</p></noscript>
+
+    <section class="signup" id="signup">
+      <h2>Get the weekly summary</h2>
+      <p>One short email a week with the latest NZ figures and what changed. Free. Unsubscribe any time.</p>
+      <!-- STEP 6 in the README: replace the action address and the hidden field name below
+           with the ones from your Mailchimp "Embedded form" code. -->
+      <form id="signup-form" action="YOUR_MAILCHIMP_FORM_ACTION_URL" method="post" target="_blank" novalidate>
+        <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="b_YOUR_HIDDEN_FIELD_NAME" tabindex="-1" autocomplete="off"></label>
+        <input type="email" name="EMAIL" placeholder="you@company.co.nz" aria-label="Email address" required autocomplete="email">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="signup-msg" role="status"></p>
+    </section>
+
+    <section class="about">
+      <h2>Where the figures come from</h2>
+      <ul>
+        <li><strong>NZ dollar and Official Cash Rate:</strong> Reserve Bank of New Zealand (tables B1 and B2), updated each business day.</li>
+        <li><strong>CPI, annual inflation and unemployment:</strong> Stats NZ, as republished by the Reserve Bank (tables M1 and M9), updated each quarter.</li>
+      </ul>
+      <p>The "latest data" date on each card is the date the figure refers to, not the date we checked. Quarterly figures change only a few times a year.</p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Data: Stats NZ (licensed for re-use under Creative Commons Attribution 4.0 International) and the Reserve Bank of New Zealand. See the <a href="https://www.rbnz.govt.nz/about-our-site/terms-of-use">RBNZ terms of use</a>.</p>
+    <p>General information only, not financial or business advice. Check the original source before relying on a figure.</p>
+  </footer>
+
+  <script src="../assets/config.js"></script>
+  <script src="../assets/dashboard.js"></script>
+</body>
+</html>

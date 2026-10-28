@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Key economic figures by country | YourSiteName</title>
+  <meta name="description" content="Key economic figures for businesses, one page per country. Starting with New Zealand: CPI, inflation, OCR, unemployment and the NZ dollar.">
+  <link rel="canonical" href="https://yoursite.com/">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap"><a class="brand" id="brand" href="./">YourSiteName</a></div>
+  </header>
+  <main class="wrap">
+    <section class="intro">
+      <h1>Key economic figures, one page per country</h1>
+      <p class="lead">The numbers businesses look up most, from official sources, with trend lines and the date of the latest data.</p>
+    </section>
+    <div class="country-list" id="countries">
+      <a class="country" href="nz/">New Zealand →</a>
+    </div>
+  </main>
+  <footer class="wrap"><p>General information only, not financial or business advice.</p></footer>
+  <script src="assets/config.js"></script>
+  <script>
+    // Fill in the site name, and list countries from data/countries.json (live ones only).
+    document.getElementById('brand').textContent = (window.SITE || {}).name || 'YourSiteName';
+    fetch('data/countries.json').then(function (r) { return r.json(); }).then(function (list) {
+      var box = document.getElementById('countries');
+      box.textContent = '';
+      list.filter(function (c) { return c.live; }).forEach(function (c) {
+        var a = document.createElement('a');
+        a.className = 'country'; a.href = c.id + '/'; a.textContent = c.name + ' →';
+        box.appendChild(a);
+      });
+    }).catch(function () {});
+  </script>
+</body>
+</html>

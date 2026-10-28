@@ -1,0 +1,5 @@
+[
+  { "id": "nz", "name": "New Zealand", "live": true },
+  { "id": "au", "name": "Australia", "live": false },
+  { "id": "uk", "name": "United Kingdom", "live": false }
+]
